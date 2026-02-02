@@ -5,9 +5,9 @@ import io
 import os
 
 # 1. CONFIGURAÇÃO DA PÁGINA
-st.set_page_config(page_title="ENAMED Analytics Pro", layout="wide")
+st.set_page_config(page_title="ENAMED Analytics P360", layout="wide")
 
-st.title("🩺 ENAMED: Inteligência Pedagógica Médica")
+st.title("🩺 ENAMED: Inteligência de Dados By Paciente 360")
 st.markdown("---")
 
 # 2. FUNÇÃO RESILIENTE PARA CARREGAMENTO (CHUMBADO + UPLOAD)
@@ -113,7 +113,7 @@ if df_alunos_raw is not None and df_gab_raw is not None and df_mapa_raw is not N
         c3.metric("Diferença (Gap)", f"{m_ies - m_nac:+.1%}")
 
         # --- MATRIZES DE PRIORIZAÇÃO ---
-        st.header("🎯 Matrizes de Priorização por Área")
+        st.header("🎯 Temas Prioritários")
         
         # Agrupamento para os gráficos
         df_peso = df_mapa_raw.groupby(['GRANDE_AREA', 'SUBESPECIALIDADE'])['NU_QUESTAO'].nunique().reset_index(name='Qtd')
